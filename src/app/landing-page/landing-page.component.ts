@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./landing-page.component.scss']
 })
 export class LandingPageComponent {
+  userEmail!: string;
 
   constructor(private router:Router){}
 
@@ -17,6 +18,11 @@ export class LandingPageComponent {
     this.router.navigateByUrl('facesnaps');
 
   }
+
+  onSubmitForm() {
+    console.log(this.userEmail);
+  }
+
 
 
 }
