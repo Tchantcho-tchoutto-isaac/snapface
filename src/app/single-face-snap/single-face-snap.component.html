@@ -1,12 +1,11 @@
-<div class="face-snap-card" [ngClass]="{' snapped': butontext==='snaps' }">
-    <a routerLink="/facesnaps">Back</a>
-    <h2>{{ faceSnap.title}}</h2>
-    <p>Mis en ligne le {{ faceSnap.createdDate }}</p>
-    <img [src]="faceSnap.imageUrl" [alt]="faceSnap.title">
-    <p>{{ faceSnap.description| uppercase  }}</p>
-    <p>{{ faceSnap.snaps }}</p>
-    <p *ngIf="faceSnap.location">Photo prise à {{ faceSnap.location }}</p>
-    <button (click)="snap()"> {{ butontext }}</button>
-    <span [ngStyle]="{ color: 'rgb(0, ' + faceSnap.snaps + ', 0)' }">🤌 {{ faceSnap.snaps }}</span>
-   
-  </div>
+<div class="face-snap-card" *ngIf="faceSnap$ | async as faceSnap" [ngClass]="{ snapped: buttonText === 'Oops, unSnap!' }">
+  <a routerLink="/facesnaps">Back</a>
+  <h2>{{ faceSnap.title }}</h2>
+  <p>Mis en ligne le {{ faceSnap.createdDate }}</p>
+  <img [src]="faceSnap.imageUrl" [alt]="faceSnap.title">
+  <p>{{ faceSnap.description | uppercase }}</p>
+  <p>{{ faceSnap.snaps }}</p>
+  <p *ngIf="faceSnap.location">Photo prise à {{ faceSnap.location }}</p>
+   <button (click)="snap(faceSnap.id)">{{ buttonText }}</button>
+  <span [ngStyle]="{ color: 'rgb(0, ' + faceSnap.snaps + ', 0)' }">🤌 {{ faceSnap.snaps }}</span>
+</div>

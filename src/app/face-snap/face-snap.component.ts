@@ -34,7 +34,7 @@ export class FaceSnapComponent implements OnInit  {
     
       
     } else {
-      this.faceSnapsService.snapFaceSnapById(this.faceSnap.id, 'snaps');
+      this.faceSnapsService.snapFaceSnapById(this.faceSnap.id, 'unsnap');
       this.butontext ="oops";
       
     }  
