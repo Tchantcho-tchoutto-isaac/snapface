@@ -12,6 +12,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NewFaceSnapComponent } from './new-face-snap/new-face-snap.component';
 import { HttpClientModule } from '@angular/common/http';
 import { httpInterceptorProviders } from './interceptors';
+import { CommonModule } from '@angular/common';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +28,8 @@ import { httpInterceptorProviders } from './interceptors';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    CommonModule
+
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'fr-FR'},
