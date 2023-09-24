@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { FaceSnap } from '../models/face_snap.model';
 import { HttpClient } from '@angular/common/http';
 import { Observable,map,switchMap } from 'rxjs';
+import { FaceSnap } from '../models/face_snap.model';
 
 @Injectable({
   providedIn: 'root'

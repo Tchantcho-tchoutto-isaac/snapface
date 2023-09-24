@@ -2,9 +2,9 @@ import { LOCALE_ID, NgModule } from '@angular/core';
 import { CommonModule, registerLocaleData } from '@angular/common';
 
 import * as fr from '@angular/common/locales/fr';
-import { HeaderComponent } from '../header/header.component';
 import { RouterModule } from '@angular/router';
 import { httpInterceptorProviders } from '../interceptors';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [

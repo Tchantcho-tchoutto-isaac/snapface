@@ -2,27 +2,27 @@ import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FaceSnapComponent } from './face-snap/face-snap.component';
-import { HeaderComponent } from './header/header.component';
-import { LandingPageComponent } from './landing-page/landing-page.component';
-import { SingleFaceSnapComponent } from './face-snap/components/single-face-snap/single-face-snap.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { CoreModule } from './core/core.module';
+import { LandingPageModule } from './landing-page/landing-page.module';
 import { HttpClientModule } from '@angular/common/http';
+import { AuthModule } from './auth/auth.module';
+
 @NgModule({
   declarations: [
     AppComponent,
-    FaceSnapComponent,
-    HeaderComponent,
-    LandingPageComponent,
-    SingleFaceSnapComponent,
+    
+   
   ],
   imports: [
+    LandingPageModule,
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule
+    CoreModule,
+    HttpClientModule,
+    AuthModule,
+
+  
+    
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'fr-FR'}
